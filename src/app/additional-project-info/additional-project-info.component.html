@@ -1,3 +1,79 @@
-<p>
-  additional-project-info works!
-</p>
+<div class="form-group row">
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-6">
+        <h3>Additional Project Information</h3>
+        <!-- Is emergency radio button -->
+        <app-radio-button2
+          [containerClasses]="'form-group'"
+          [idValue1]="''"
+          [idValue2]="''"
+          [radioButtonClasses]="''"
+          [radioButtonLabel1]="'Yes'"
+          [radioButtonLabel2]="'No'"
+          [radioButtonName]="'isEmergency'"
+          [radioButtonTitle]="'Is an emergency'"
+          [radioButtonValue1]="'1'"
+          [radioButtonValue2]="'0'"
+          [titleClasses]="'cust-marg-bot-0'"
+        ></app-radio-button2>
+        <!-- Project status select list -->
+        <app-select-list
+          [containerClasses]="'form-group'"
+          [idValue]="''"
+          [selectData]="projectStatusSelectOptions"
+          [selectListTitle]="'Project status'"
+          [titleClasses]="'cust-marg-bot-0'"
+        ></app-select-list>
+        <!-- Project timeline select list -->
+        <app-select-list
+          [containerClasses]="'form-group'"
+          [idValue]="''"
+          [selectData]="projectTimelineSelectOptions"
+          [selectListTitle]="'Project timeline'"
+          [titleClasses]="'cust-marg-bot-0'"
+        ></app-select-list>
+        <!-- Property owner radio button -->
+        <app-radio-button2
+          [containerClasses]="'form-group'"
+          [idValue1]="''"
+          [idValue2]="''"
+          [radioButtonClasses]="''"
+          [radioButtonLabel1]="'Yes'"
+          [radioButtonLabel2]="'No'"
+          [radioButtonName]="'isPropertyOwner'"
+          [radioButtonTitle]="'Is the property owner'"
+          [radioButtonValue1]="'1'"
+          [radioButtonValue2]="'0'"
+          [titleClasses]="'cust-marg-bot-0'"
+        ></app-radio-button2>
+        <!-- Is interested in financing radio button -->
+        <app-radio-button2
+          [containerClasses]="'form-group'"
+          [idValue1]="''"
+          [idValue2]="''"
+          [radioButtonClasses]="''"
+          [radioButtonLabel1]="'Yes'"
+          [radioButtonLabel2]="'No'"
+          [radioButtonName]="'isInterestedFinancing'"
+          [radioButtonTitle]="'Is interested in financing'"
+          [radioButtonValue1]="'1'"
+          [radioButtonValue2]="'0'"
+          [titleClasses]="'cust-marg-bot-0'"
+        ></app-radio-button2>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6">
+        <app-button
+          [buttonClasses]="''"
+          [buttonTitle]="'Submit'"
+          [buttonValue]="'testButtonValue'"
+          (buttonComponentClicked)="searchConsumerFunction()"
+          [containerClasses]="'text-right cust-marg-top-15'"
+          [idValue]="'submitButtonId'"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>
