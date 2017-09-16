@@ -29,6 +29,7 @@
           [dataArray]="consumers"
           [isContentVisible]="true"
           [isTabCollapsible]="true"
+          (table5RowClicked)="consumerTableSelectClickFunction($event)"
           [tableClasses]="'table table-hover'"
           [tableTitle]="'Multiple consumers found, please select a consumer'"
           [titleClasses]="'text-left'"

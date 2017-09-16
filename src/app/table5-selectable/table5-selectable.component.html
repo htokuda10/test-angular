@@ -1,3 +1,45 @@
-<p>
-  table5-selectable works!
-</p>
+<div class="row">
+  <div class="col-sm-12">
+    <h4 [class]="titleClasses">{{ tableTitle }}
+      <app-up-down-toggle
+        *ngIf="tabCollapsible === true"
+        [isContentVisible]="contentVisible"
+        (upDownToggleComponentClicked)="upDownToggleComponentClickedFunction()"
+      ></app-up-down-toggle>
+    </h4>
+    <div class="row" [hidden]="!contentVisible">
+      <div class="col-sm-12">
+        <table [class]="tableClasses">
+          <thead>
+          <tr>
+            <th>
+              {{ columnName1 }}
+            </th>
+            <th>
+              {{ columnName2 }}
+            </th>
+            <th>
+              {{ columnName3 }}
+            </th>
+            <th>
+              {{ columnName4 }}
+            </th>
+            <th>
+              {{ columnName5 }}
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let dataObject of dataArray" (click)="rowClickedFunction(dataObject)">
+            <td>{{ dataObject[columnKey1] }}</td>
+            <td>{{ dataObject[columnKey2] }}</td>
+            <td>{{ dataObject[columnKey3] }}</td>
+            <td>{{ dataObject[columnKey4] }}</td>
+            <td>{{ dataObject[columnKey5] }}</td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>

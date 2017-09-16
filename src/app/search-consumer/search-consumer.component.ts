@@ -5,7 +5,7 @@ import { Component, Input, OnInit } from '@angular/core';
   templateUrl: './search-consumer.component.html',
   styleUrls: ['./search-consumer.component.css']
 })
-export class SearchConsumerComponent implements OnInit{
+export class SearchConsumerComponent implements OnInit {
 
   @Input() consumers;
   @Input() isContentVisible: boolean;
