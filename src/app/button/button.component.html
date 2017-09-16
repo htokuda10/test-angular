@@ -1,3 +1,4 @@
-<p>
-  button works!
-</p>
+<div [ngClass]="containerClasses">
+  <button [id]="idValue" [class]="buttonClasses" [value]="buttonValue" type="button"
+          (click)="clickFunction()">{{ buttonTitle }}</button>
+</div>

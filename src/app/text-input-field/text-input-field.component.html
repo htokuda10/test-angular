@@ -1,3 +1,4 @@
-<p>
-  text-input-field works!
-</p>
+<div [ngClass]="containerClasses">
+  <p [ngClass]="titleClasses">{{ textInputTitle }}:</p>
+  <input [id]="idValue" [ngClass]="inputClasses" [placeholder]="placeholderValue" type="text">
+</div>

@@ -1,3 +1,54 @@
-<p>
-  search-consumer works!
-</p>
+<div id="searchConsumerComponent" class="form-group row">
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-12">
+        <h3>Search For Consumer
+          <app-up-down-toggle
+            [isContentVisible]="contentVisible"
+            (upDownToggleComponentClicked)="upDownToggleComponentClickedFunction()"
+          ></app-up-down-toggle>
+        </h3>
+      </div>
+    </div>
+    <div class="row" [hidden]="!contentVisible">
+      <div class="col-sm-6">
+        <!-- Zip code input -->
+        <app-text-input-field
+          [containerClasses]="'text-left'"
+          [idValue]="'zipCodeInputId'"
+          [inputClasses]="'text-left'"
+          [placeholderValue]="'Zip Code'"
+          [textInputTitle]="'Zip Code'"
+          [titleClasses]="'cust-marg-bot-0 cust-marg-top-5'"
+        ></app-text-input-field>
+        <!-- Phone number input -->
+        <app-text-input-field
+          [containerClasses]="'text-left'"
+          [idValue]="'phoneNumberInputId'"
+          [inputClasses]="'text-left'"
+          [placeholderValue]="'(###) ###-####'"
+          [textInputTitle]="'Phone Number'"
+          [titleClasses]="'cust-marg-bot-0 cust-marg-top-5'"
+        ></app-text-input-field>
+        <!-- Email input -->
+        <app-text-input-field
+          [containerClasses]="'text-left'"
+          [idValue]="'emailAddressInputId'"
+          [inputClasses]="''"
+          [placeholderValue]="'example@email.com'"
+          [textInputTitle]="'Email Address'"
+          [titleClasses]="'cust-marg-bot-0 cust-marg-top-5'"
+        ></app-text-input-field>
+        <!-- Search button -->
+        <app-button
+          [buttonClasses]="'Test'"
+          [buttonTitle]="'Search'"
+          [buttonValue]="'testButtonValue'"
+          (buttonComponentClicked)="searchConsumerFunction()"
+          [containerClasses]="'text-right cust-marg-top-15'"
+          [idValue]="'searchButtonId'"
+        ></app-button>
+      </div>
+    </div>
+  </div>
+</div>
